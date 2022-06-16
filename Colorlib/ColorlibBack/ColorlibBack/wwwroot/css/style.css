@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+nav .text-center{
+    padding-top: 20%;
+    color: white;
+    
+}
+nav .text-center h1{
+    font-size: 70px;
+}
+.btn1{
+    padding: 25px 45px;
+}
+.main1{
+    background-color: rgb(241, 245, 247)
+}
+.main1 a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.main2 p{
+    text-align: justify;
+}
+.main3 img{
+    border-radius: 50%;
+}
+.main3 .social i{
+    color: rgb(255, 114, 62);
+    padding: 5px;
+    font-size: 20px;
+}
+.main3 .social i:hover{
+    color: rgb(253, 80, 17);
+
+}
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+.main4{
+    background-color: rgb(241, 245, 247)
+}
+.main4 .header-menu h2{
+    font-size: 50px;
+}
+.main4 .header-menu p{
+    font-size: 20px;
+}
+.main5 i{
+    font-size: 50px;
+}
+.main5 p{
+    font-size: 18px;
+}
+.main6{
+    background-color: rgb(241, 245, 247);
+    height: 50vh;
+    
+}
+.main7 form{
+    width: 50%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+footer a{
+    text-decoration: none;
+}

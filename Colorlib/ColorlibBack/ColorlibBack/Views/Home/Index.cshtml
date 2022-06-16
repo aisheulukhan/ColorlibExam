@@ -1,0 +1,330 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="main1">
+    <div class="text-center pt-5">
+        <h1>Find your best food</h1>
+        <p class="textmuted">Free Website Template For Restaurants Made by Colorlib</p>
+    </div>
+    <div class="card-group container pt-5 ">
+        <div class="card">
+            <img src="./image/salat1.jpg" class="card-img-top" alt="...">
+
+        </div>
+        <div class="card text-center pt-5 ">
+            <div class="card-body ">
+                <h6 class="card-title text-danger">VEGIES</h6>
+                <h5 class="card-title">BEEF EMPANADAS</h5>
+                <p class="card-text text-muted pt-4 ">Separated they live in <br> Bookmarksgrove right at the <br> coast of the Semantics, a large <br> language ocean.</p>
+                <a href="">LEARN MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./image/salat2.jpg" class="card-img-top" alt="...">
+        </div>
+    </div>
+
+
+    <div class="card-group container ">
+        <div class="card text-center pt-5 ">
+            <div class="card-body ">
+                <h6 class="card-title text-danger">VEGIES</h6>
+                <h5 class="card-title">BEEF EMPANADAS</h5>
+                <p class="card-text text-muted pt-4 ">Separated they live in <br> Bookmarksgrove right at the <br> coast of the Semantics, a large <br> language ocean.</p>
+                <a href="">LEARN MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+
+
+
+        <div class="card">
+            <img src="./image/salat2.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="card text-center pt-5 ">
+            <div class="card-body ">
+                <h6 class="card-title text-danger">VEGIES</h6>
+                <h5 class="card-title">BEEF EMPANADAS</h5>
+                <p class="card-text text-muted pt-4 ">Separated they live in <br> Bookmarksgrove right at the <br> coast of the Semantics, a large <br> language ocean.</p>
+                <a href="">LEARN MORE <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main2">
+    <div class="px-4 pt-5 my-5 text-center">
+        <h1 class="display-5 fw-bold">The Restaurant</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 text-muted">Far far away, behind the word mountains, far from the countries Vokalia and  Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p class="lead mb-4 text-muted">It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+        </div>
+        <div>
+            <div>
+                <img src="./image/dsfdsg.webp" alt="Example image">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main3">
+    <div class="container">
+
+        <div class="row ">
+            <div class="col-lg-6 text-center">
+                <img src="./image/aspaz1.jfif" width="140px" height="140px" alt="">
+                <h2>Daniel Graham</h2>
+                <h4 class="text-muted">MASTER CHEF</h4>
+                <p class="text-muted pt-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p class="text-muted">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. It is a paradisematic country.</p>
+                <div class="social">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-6 text-center">
+                <img src="./image/aspaz2.webp" width="140px" height="140px" alt="">
+                <h2>Nick Browning</h2>
+                <h4 class="text-muted">MASTER CHEF</h4>
+                <p class="text-muted pt-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p class="text-muted">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. It is a paradisematic country.</p>
+                <div class="social">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-instagram"></i>
+                </div>
+            </div><!-- /.col-lg-4 -->
+
+        </div>
+    </div>
+</section>
+<section class="main4 ">
+    <div class="header-menu container pt-5">
+        <h2 class="text-center">Menu</h2>
+        <p class="text-center text-muted">Free Website Template For Restaurants Made by Colorlib</p>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'BREAKFAST')">BREAKFAST</button>
+            <button class="tablinks" onclick="openCity(event, 'BRUNCH')">BRUNCH</button>
+            <button class="tablinks" onclick="openCity(event, 'DINNER')">DINNER</button>
+        </div>
+
+
+        <div id="BREAKFAST" class=" mb-3 tabcontent">
+            <div class="row ">
+                @foreach (var item in Model.Breakfasts)
+                {
+
+                <div class="col-lg-4">
+                    <img src="./image/@item.Image" class="img-fluid " width="140px" height="140px" alt="...">
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text text-muted">@item.Desc</p>
+                        <p class="card-text "><small class="text-danger">$@item.Price</small></p>
+                    </div>
+                </div>
+                }
+            </div>
+
+        </div>
+
+        <div id="BRUNCH" class=" mb-3 tabcontent">
+            
+
+            <div class="row ">
+                @foreach (var item in Model.Brunches)
+                {
+                    <div class="col-lg-4">
+                        <img src="./image/@item.Image" class="img-fluid " width="140px" height="140px" alt="...">
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text text-muted">@item.Desc</p>
+                            <p class="card-text "><small class="text-danger">$@item.Price</small></p>
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+
+        <div id="DINNER" class=" mb-3 tabcontent">
+            <div class="row ">
+                @foreach (var item in Model.Dinners)
+                {
+
+                <div class="col-lg-4">
+                    <img src="./image/@item.Image" class="img-fluid " width="140px" height="140px" alt="...">
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text text-muted">@item.Desc</p>
+                        <p class="card-text "><small class="text-danger">$@item.Price</small></p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<section class="main5 pt-5">
+    <div class="text-center">
+        <h2>Other Services</h2>
+        <p class=" text-muted">Free Website Template For Restaurants Made by Colorlib</p>
+    </div>
+    <div class="card-group container pt-5">
+        <div class=" col-lg-4 text-center">
+            <i class="bi bi-brightness-high"></i>
+            <div class="card-body">
+                <h5 class="card-title">Quality Cuisine</h5>
+                <p class="card-text text-muted">Far far away, behind the word <br> mountains, far from the countries <br> Vokalia and Consonantia, there live the <br> blind texts.</p>
+            </div>
+        </div>
+        <div class=" col-lg-4 text-center">
+            <i class="bi bi-brightness-high"></i>
+            <div class="card-body">
+                <h5 class="card-title">Quality Cuisine</h5>
+                <p class="card-text text-muted">Far far away, behind the word <br> mountains, far from the countries <br> Vokalia and Consonantia, there live the <br> blind texts.</p>
+            </div>
+        </div>
+        <div class=" col-lg-4 text-center">
+            <i class="bi bi-brightness-high"></i>
+            <div class="card-body">
+                <h5 class="card-title">Quality Cuisine</h5>
+                <p class="card-text text-muted">Far far away, behind the word <br> mountains, far from the countries <br> Vokalia and Consonantia, there live the <br> blind texts.</p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class=" col-lg-4 text-center">
+            <i class="bi bi-brightness-high"></i>
+            <div class="card-body">
+                <h5 class="card-title">Quality Cuisine</h5>
+                <p class="card-text text-muted">Far far away, behind the word <br> mountains, far from the countries <br> Vokalia and Consonantia, there live the <br> blind texts.</p>
+            </div>
+        </div>
+        <div class=" col-lg-4 text-center">
+            <i class="bi bi-brightness-high"></i>
+            <div class="card-body">
+                <h5 class="card-title">Quality Cuisine</h5>
+                <p class="card-text text-muted">Far far away, behind the word <br> mountains, far from the countries <br> Vokalia and Consonantia, there live the <br> blind texts.</p>
+            </div>
+        </div>
+        <div class=" col-lg-4 text-center">
+            <i class="bi bi-brightness-high"></i>
+            <div class="card-body">
+                <h5 class="card-title">Quality Cuisine</h5>
+                <p class="card-text text-muted">Far far away, behind the word <br> mountains, far from the countries <br> Vokalia and Consonantia, there live the <br> blind texts.</p>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<section class="main6">
+    <div class="text-center pt-5">
+        <h1>Reservation</h1>
+        <p class="text-muted">Free Website Template For Restaurants Made by Colorlib</p>
+    </div>
+    <form class="container mt-5 bg-white">
+        <div class="row mb-4">
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example1">Name</label>
+                    <input type="text" id="form3Example1" class="form-control" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example2">Email</label>
+                    <input type="email" id="form3Example2" class="form-control" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example2">Phone</label>
+                    <input type="number" id="form3Example2" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example1">Number of Persons</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Person 1</option>
+                        <option value="1">Person 2</option>
+                        <option value="2">Person 3</option>
+                        <option value="3">Person 4</option>
+                        <option value="3">Person 5+</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example2">Date</label>
+                    <input type="date" id="form3Example2" class="form-control" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example2">Time</label>
+                    <input type="time" id="form3Example2" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-outline-danger">Reverse Now</button>
+        </div>
+
+
+
+    </form>
+</section>
+<section class="main7">
+    <div class="text-center pt-5">
+        <h1>Get In Touch</h1>
+    </div>
+    <form class="container mt-5">
+        <div class="row mb-4">
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example1">Name</label>
+                    <input type="text" id="form3Example1" class="form-control" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example2">Email</label>
+                    <input type="email" id="form3Example2" class="form-control" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-outline">
+                    <label class="form-label text-muted" for="form3Example2">Phone</label>
+                    <input type="number" id="form3Example2" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form4Example3">Message</label>
+            <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-outline-danger">Send Message</button>
+        </div>
+    </form>
+</section>
+<section class="main8 pt-5">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47725.37803183548!2d46.606750041503!3d41.616055205160436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40464b3c2d85a753%3A0x9b64bff01e358777!2sZaqatala%2C%20Azerbaijan!5e0!3m2!1sen!2s!4v1655378851938!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
